@@ -6,5 +6,10 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+    },
+  },
   plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],
 })
