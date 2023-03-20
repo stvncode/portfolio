@@ -9,7 +9,7 @@ export const ThemeIcon: FC = () => {
   return (
     <ActionIcon
       variant="outline"
-      color={dark ? 'yellow' : 'blue'}
+      color={dark ? 'yellow' : 'dark.9'}
       onClick={() => toggleColorScheme()}
       title="Toggle color scheme"
     >

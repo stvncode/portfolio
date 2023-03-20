@@ -30,6 +30,7 @@
     "prettier": "latest",
     "react": "17",
     "react-dom": "17",
+    "react-router-dom": "^6.9.0",
     "vite-plugin-checker": "^0.5.6",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.7"
