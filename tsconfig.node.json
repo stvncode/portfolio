@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "types": ["vite/client"],
+    "baseUrl": "src",
+    "paths": {
+      "*": ["./*"]
+    }
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "exclude": ["node_modules"]
 }
