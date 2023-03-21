@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'futura';
+  src: url('../public/fonts/FuturaPTExtraBold.otf') format('truetype');
+}
+
+html,
+body {
+  font-family: 'futura';
+}
