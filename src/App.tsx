@@ -1,11 +1,12 @@
 import { ColorScheme, ColorSchemeProvider, DEFAULT_THEME, MantineProvider } from '@mantine/core'
 import { FC, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 
 export const App: FC = () => {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('light')
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
@@ -15,6 +16,8 @@ export const App: FC = () => {
       ...DEFAULT_THEME.colors,
     },
     colorScheme,
+    white: '#efe7db',
+    black: '#202023',
     fontFamily: 'futura',
   }
 

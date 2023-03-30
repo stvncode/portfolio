@@ -1,7 +1,8 @@
 import { ActionIcon, useMantineColorScheme } from '@mantine/core'
-import { IconPacman, IconMoonStars } from '@tabler/icons-react'
+import { IconPacman } from '@tabler/icons-react'
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { useActionStyles } from './ActionIcon.styles'
 
 export const PacmanIcon: FC = () => {

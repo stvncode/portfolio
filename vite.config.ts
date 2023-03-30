@@ -8,7 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react'],
     },
   },
   plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],
