@@ -4,6 +4,7 @@ import { FC } from 'react'
 
 export const ThemeIcon: FC = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
+
   const dark = colorScheme === 'dark'
 
   return (
