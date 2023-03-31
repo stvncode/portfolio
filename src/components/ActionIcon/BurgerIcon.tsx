@@ -3,7 +3,7 @@ import { useMediaQuery } from '@mantine/hooks'
 import { IconMenu2 } from '@tabler/icons-react'
 import { FC } from 'react'
 
-import { menuItems } from '../../constants/menu'
+import { menuItems } from 'constants/menu'
 
 export const BurgerIcon: FC = () => {
   const { colorScheme } = useMantineColorScheme()

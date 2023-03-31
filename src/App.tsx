@@ -2,8 +2,8 @@ import { ColorScheme, ColorSchemeProvider, DEFAULT_THEME, MantineProvider } from
 import { FC, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Layout } from './components/Layout'
-import { Home } from './pages/Home'
+import { Layout } from 'components/Layout'
+import { Home } from 'pages/Home'
 
 export const App: FC = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')

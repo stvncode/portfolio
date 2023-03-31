@@ -1,5 +1,4 @@
-import React from 'react'
-import { HomePresentation } from '../../features/Home/HomePresentation'
+import { HomePresentation } from 'features/Home/HomePresentation'
 
 export const Home = () => {
   return (

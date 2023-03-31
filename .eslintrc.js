@@ -11,12 +11,17 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {
-        // use an array
-        project: ['apps/*/tsconfig.json'],
+        // Replace this path with the path to your tsconfig.json file
+        project: './tsconfig.json',
       },
-    },
-    react: {
-      version: 'detect',
+      // Add the following configuration for vite-tsconfig-paths
+      // Replace 'src' with the path to your source code directory
+      // and '.ts' with the file extension you are using
+      'vite-tsconfig-paths': {
+        alias: {
+          '@src/*': resolve(__dirname, 'src') + '/*.ts',
+        },
+      },
     },
   },
   env: {

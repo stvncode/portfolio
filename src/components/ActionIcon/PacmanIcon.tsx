@@ -1,4 +1,4 @@
-import { ActionIcon, useMantineColorScheme } from '@mantine/core'
+import { ActionIcon } from '@mantine/core'
 import { IconPacman } from '@tabler/icons-react'
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -9,14 +9,10 @@ export const PacmanIcon: FC = () => {
   const navigate = useNavigate()
 
   const { classes } = useActionStyles()
-  const { colorScheme } = useMantineColorScheme()
-
-  const dark = colorScheme === 'dark'
 
   return (
     <ActionIcon
       variant="transparent"
-      color={dark ? 'gray.0' : 'dark.9'}
       onClick={() => navigate('/')}
       className={classes.pacman}
       title="Icon"

@@ -1,7 +1,7 @@
 import React, { FC, Suspense } from 'react'
 // import { Canvas } from '@react-three/fiber'
 // import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
-import { CanvasLoader } from '../../components/Loader'
+import { CanvasLoader } from 'components/Loader'
 
 export const Ball: FC<{ imgUrl: string }> = ({ imgUrl }) => {
   //   const [decal] = useTexture([imgUrl])
