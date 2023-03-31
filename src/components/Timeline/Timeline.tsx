@@ -1,4 +1,4 @@
-import { Timeline as MTimeline, Text, ThemeIcon, Avatar } from '@mantine/core'
+import { Timeline as MTimeline, Text, ThemeIcon, Avatar, Flex } from '@mantine/core'
 import { IconSun, IconVideo } from '@tabler/icons-react'
 import { FC } from 'react'
 
@@ -6,8 +6,9 @@ import { useTimelineStyles } from './Timeline.styles'
 
 export const Timeline: FC = () => {
   const { classes } = useTimelineStyles()
+
   return (
-    <div className={classes.container}>
+    <Flex justify="center">
       <MTimeline>
         <MTimeline.Item title="Default bullet" bulletSize={24}>
           <Text color="dimmed" size="sm">
@@ -53,6 +54,6 @@ export const Timeline: FC = () => {
           </Text>
         </MTimeline.Item>
       </MTimeline>
-    </div>
+    </Flex>
   )
 }

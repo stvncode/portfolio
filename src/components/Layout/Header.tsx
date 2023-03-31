@@ -6,6 +6,7 @@ import { menuItems } from 'constants/menu'
 import { BurgerIcon, PacmanIcon, ThemeIcon } from 'components/ActionIcon'
 
 import { useLayoutStyles } from './Layout.styles'
+import { Link } from 'react-router-dom'
 
 export const Header: FC = () => {
   const { classes } = useLayoutStyles()
@@ -25,9 +26,11 @@ export const Header: FC = () => {
           {!isMobile && (
             <Flex align="center" gap={20} className={classes.menu}>
               {menuItems.map((item, i) => (
-                <Text key={i} size={15} className={classes.menuItem}>
-                  {item.name}
-                </Text>
+                <Link to={`#${item.name.toLowerCase()}`} key={i} className={classes.link}>
+                  <Text size={15} className={classes.menuItem}>
+                    {item.name}
+                  </Text>
+                </Link>
               ))}
             </Flex>
           )}

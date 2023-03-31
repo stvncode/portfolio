@@ -20,4 +20,5 @@ export const useLayoutStyles = createStyles({
       cursor: 'pointer',
     },
   },
+  link: { textDecoration: 'none', color: 'inherit' },
 })
