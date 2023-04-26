@@ -1,17 +1,17 @@
 import {
-  javascript,
-  typescript,
-  html,
   css,
+  docker,
+  figma,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   threejs,
+  typescript,
 } from '../assets'
 
 export const technologies = [

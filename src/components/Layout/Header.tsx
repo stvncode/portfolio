@@ -2,11 +2,11 @@ import { Flex, Header as MantineHeader, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { FC } from 'react'
 
-import { menuItems } from 'constants/menu'
 import { BurgerIcon, PacmanIcon, ThemeIcon } from 'components/ActionIcon'
+import { menuItems } from 'constants/menu'
 
-import { useLayoutStyles } from './Layout.styles'
 import { Link, useNavigate } from 'react-router-dom'
+import { useLayoutStyles } from './Layout.styles'
 
 export const Header: FC = () => {
   const { classes } = useLayoutStyles()

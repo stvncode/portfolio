@@ -1,8 +1,8 @@
 import { Badge, Card, Group, Image, Text } from '@mantine/core'
 import { FC } from 'react'
-import { WorksCardType } from './Works.types'
 import { useNavigate } from 'react-router-dom'
 import { useWorksStyles } from './Works.styles'
+import { WorksCardType } from './Works.types'
 
 export const WorksCard: FC<WorksCardType> = ({ img, title, description, on, link }) => {
     const navigate = useNavigate()

@@ -1,6 +1,6 @@
 import { Divider, Flex } from '@mantine/core'
 import { WorksCards } from 'features/Works'
-import { contentWorks, companiesWorks, personnalWorks } from 'features/Works/Works.utils'
+import { companiesWorks, contentWorks, personnalWorks } from 'features/Works/Works.utils'
 import { FC } from 'react'
 
 export const Work: FC = () => {

@@ -2,10 +2,10 @@ import { ColorScheme, ColorSchemeProvider, DEFAULT_THEME, MantineProvider } from
 import { FC } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Layout } from 'components/Layout'
-import { Home } from 'pages/Home'
 import { useLocalStorage } from '@mantine/hooks'
+import { Layout } from 'components/Layout'
 import { Contact } from 'pages/Contact'
+import { Home } from 'pages/Home'
 import { Work } from 'pages/Work'
 
 export const App: FC = () => {

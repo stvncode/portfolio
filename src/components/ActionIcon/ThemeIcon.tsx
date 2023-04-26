@@ -1,5 +1,5 @@
 import { ActionIcon, useMantineColorScheme } from '@mantine/core'
-import { IconSun, IconMoonStars } from '@tabler/icons-react'
+import { IconMoonStars, IconSun } from '@tabler/icons-react'
 import { FC } from 'react'
 
 export const ThemeIcon: FC = () => {
