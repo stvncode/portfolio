@@ -6,10 +6,12 @@ import { menuItems } from 'constants/menu'
 import { BurgerIcon, PacmanIcon, ThemeIcon } from 'components/ActionIcon'
 
 import { useLayoutStyles } from './Layout.styles'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Header: FC = () => {
   const { classes } = useLayoutStyles()
+
+  const navigate = useNavigate()
 
   const isMobile = useMediaQuery('(max-width: 767px)')
 
@@ -19,7 +21,7 @@ export const Header: FC = () => {
         <Flex align="center" gap={70}>
           <Flex align="center" gap={15}>
             <PacmanIcon />
-            <Text weight="bold" size="xl">
+            <Text weight="bold" size="xl" className={classes.title} onClick={() => navigate('/')}>
               Steven Travers
             </Text>
           </Flex>

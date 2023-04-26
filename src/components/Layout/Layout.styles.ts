@@ -8,7 +8,7 @@ export const useLayoutStyles = createStyles({
   },
   flex: {
     height: '100%',
-    margin: '0 -7rem'
+    margin: '0 -7rem',
   },
   menu: {
     marginTop: '.3rem',
@@ -21,4 +21,7 @@ export const useLayoutStyles = createStyles({
     },
   },
   link: { textDecoration: 'none', color: 'inherit' },
+  title: {
+    cursor: 'pointer',
+  },
 })
