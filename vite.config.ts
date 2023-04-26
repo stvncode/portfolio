@@ -11,5 +11,8 @@ export default defineConfig({
       external: ['react'],
     },
   },
+  server: {
+    host: true,
+  },
   plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],
 })

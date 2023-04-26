@@ -25,13 +25,19 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import conduktor from "./company/conduktor.png";
+import libertrip from "./company/libertrip.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import contact from "./contact.png";
+import profile from "./profile.jpeg";
 
 export {
   logo,
+  contact,
+  profile,
   backend,
   creator,
   mobile,
@@ -59,4 +65,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  conduktor,
+  libertrip
 };

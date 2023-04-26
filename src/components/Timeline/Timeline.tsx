@@ -1,59 +1,40 @@
-import { Timeline as MTimeline, Text, ThemeIcon, Avatar, Flex } from '@mantine/core'
-import { IconSun, IconVideo } from '@tabler/icons-react'
 import { FC } from 'react'
 
 import { useTimelineStyles } from './Timeline.styles'
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import { timelineItems } from './Timeline.utils'
+import 'react-vertical-timeline-component/style.min.css'
+import { useMantineColorScheme, useMantineTheme } from '@mantine/core'
 
 export const Timeline: FC = () => {
-  const { classes } = useTimelineStyles()
+  const { colorScheme } = useMantineColorScheme()
+  const { cx, classes } = useTimelineStyles()
+  const theme = useMantineTheme()
+
+  const dark = colorScheme === 'dark'
+
+  const redirect = (url: string) => {
+    window.open(url, '_blank')
+  }
 
   return (
-    <Flex justify="center">
-      <MTimeline>
-        <MTimeline.Item title="Default bullet" bulletSize={24}>
-          <Text color="dimmed" size="sm">
-            Default bullet without anything
-          </Text>
-        </MTimeline.Item>
-        <MTimeline.Item
-          title="Avatar"
-          bulletSize={24}
-          bullet={
-            <Avatar
-              size={22}
-              radius="xl"
-              src="https://avatars0.githubusercontent.com/u/10353856?s=460&u=88394dfd67727327c1f7670a1764dc38a8a24831&v=4"
-            />
-          }
+    <VerticalTimeline lineColor={dark ? theme.white : theme.black}>
+      {timelineItems.map((item, index) => (
+        <div className={cx("vertical-timeline-element",classes.timelineElement)} key={index}>
+        <VerticalTimelineElement
+          date={item.date}
+          dateClassName={classes.date}
+          iconOnClick={() => redirect(item.website)}
+          iconClassName={classes['icon']}
+          contentStyle={{ background: dark ? theme.white : theme.black, color: dark ? theme.black : theme.white }}
+          contentArrowStyle={{ color: dark ? theme.white : theme.black }}
+          icon={<img src={item.icon} alt="icon" width={57} height={57} />}
         >
-          <Text color="dimmed" size="sm">
-            MTimeline bullet as avatar image
-          </Text>
-        </MTimeline.Item>
-        <MTimeline.Item title="Icon" bulletSize={24} bullet={<IconSun size="0.8rem" />}>
-          <Text color="dimmed" size="sm">
-            MTimeline bullet as icon
-          </Text>
-        </MTimeline.Item>
-        <MTimeline.Item
-          title="ThemeIcon"
-          bulletSize={24}
-          bullet={
-            <ThemeIcon
-              size={22}
-              variant="gradient"
-              gradient={{ from: 'lime', to: 'cyan' }}
-              radius="xl"
-            >
-              <IconVideo size="0.8rem" />
-            </ThemeIcon>
-          }
-        >
-          <Text color="dimmed" size="sm">
-            MTimeline bullet as ThemeIcon component
-          </Text>
-        </MTimeline.Item>
-      </MTimeline>
-    </Flex>
+          <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          <p>{item.content}</p>
+        </VerticalTimelineElement>
+        </div>
+      ))}
+    </VerticalTimeline>
   )
 }

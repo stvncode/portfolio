@@ -3,13 +3,18 @@ lockfileVersion: 5.3
 specifiers:
   '@emotion/react': ^11.10.6
   '@mantine/core': ^6.0.4
+  '@mantine/form': ^6.0.7
   '@mantine/hooks': ^6.0.4
   '@react-three/drei': ^9.58.2
   '@react-three/fiber': ^8.12.0
+  '@splinetool/loader': ^0.9.295
+  '@splinetool/react-spline': ^2.2.6
+  '@splinetool/runtime': ^0.9.295
   '@tabler/icons-react': ^2.11.0
   '@types/eslint': ^8.21.3
   '@types/react': ^17.0.53
   '@types/react-dom': ^17.0.19
+  '@types/react-vertical-timeline-component': ^3.3.3
   '@types/three': ^0.149.0
   '@typescript-eslint/eslint-plugin': ^5.56.0
   '@typescript-eslint/parser': ^5.56.0
@@ -28,6 +33,7 @@ specifiers:
   react: ^17.0.2
   react-dom: ^17.0.2
   react-router-dom: ^6.9.0
+  react-vertical-timeline-component: ^3.6.0
   three: ^0.150.1
   ts-pattern: ^4.2.2
   typescript: ^4.9.5
@@ -39,17 +45,22 @@ specifiers:
 dependencies:
   '@emotion/react': 11.10.6_3fca2d117ed5000ffcc776ee7c4bce58
   '@mantine/core': 6.0.4_b2747da0e91562ebe082002ef295d3d2
+  '@mantine/form': 6.0.7_react@17.0.2
   '@mantine/hooks': 6.0.4_react@17.0.2
   '@react-three/drei': 9.58.2_1af5d43553675a3c9970a18791d5937c
   '@react-three/fiber': 8.12.0_400937dab6cd9d3299cabc2efbfff613
+  '@splinetool/loader': 0.9.295_three@0.150.1
+  '@splinetool/react-spline': 2.2.6_a9b2211d01f81a88198870e4350d54f4
+  '@splinetool/runtime': 0.9.295
   '@tabler/icons-react': 2.11.0_react@17.0.2
   '@types/eslint': 8.21.3
+  '@types/react-vertical-timeline-component': 3.3.3
   '@types/three': 0.149.0
   '@typescript-eslint/eslint-plugin': 5.56.0_449486fc5e1de146d8ab3ca645093064
   '@typescript-eslint/parser': 5.56.0_eslint@8.36.0+typescript@4.9.5
   eslint: 8.36.0
   eslint-config-prettier: 8.8.0_eslint@8.36.0
-  eslint-config-turbo: 1.8.8_eslint@8.36.0
+  eslint-config-turbo: 1.9.1_eslint@8.36.0
   eslint-import-resolver-typescript: 3.5.3_201514a69359a09b93b819e6d1f20366
   eslint-plugin-import: 2.27.5_eslint@8.36.0
   eslint-plugin-prettier: 4.2.1_c5975de6a481b4ab961ce2cab41cfd63
@@ -61,6 +72,7 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.9.0_react-dom@17.0.2+react@17.0.2
+  react-vertical-timeline-component: 3.6.0_react@17.0.2
   three: 0.150.1
   ts-pattern: 4.2.2
   vite-plugin-checker: 0.5.6_4a9f6c26f236ca65b45c488c86619407
@@ -744,6 +756,16 @@ packages:
       - '@types/react'
     dev: false
 
+  /@mantine/form/6.0.7_react@17.0.2:
+    resolution: {integrity: sha512-5fApVmV9gqqh0h04KkeLzZ79LCBMt91Nydj/h1uzFNluiIxcLCpN/VrOvqiG9DbvIi6h6yeBP/7rbZheHjuXgg==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      fast-deep-equal: 3.1.3
+      klona: 2.0.6
+      react: 17.0.2
+    dev: false
+
   /@mantine/hooks/6.0.4_react@17.0.2:
     resolution: {integrity: sha512-rG+P18vOJcMQGo/3XAzR3f7rtmzjuccTIc10I9F2J49cRKem4wQZQdYeA8Wnxx95SRmVTQtf2hYXjbUliqgmAA==}
     peerDependencies:
@@ -1068,6 +1090,36 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /@splinetool/loader/0.9.295_three@0.150.1:
+    resolution: {integrity: sha512-NBGIqoRPCTqq2jPf+8RjG+4RPK13iI3uiXvgzlMglsZI95e9eEr/uM4Ht3J5ChumFI+AJczav330TU1bi9H9Iw==}
+    peerDependencies:
+      three: '>=0.133.0'
+    dependencies:
+      semver-compare: 1.0.0
+      three: 0.150.1
+    dev: false
+
+  /@splinetool/react-spline/2.2.6_a9b2211d01f81a88198870e4350d54f4:
+    resolution: {integrity: sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==}
+    peerDependencies:
+      '@splinetool/runtime': '*'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@splinetool/runtime': 0.9.295
+      lodash.debounce: 4.0.8
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-merge-refs: 2.0.1
+    dev: false
+
+  /@splinetool/runtime/0.9.295:
+    resolution: {integrity: sha512-+Ltr6KZz+p+ftpQiKWPSjKyToDPMGJsZFhNYVAv5AOZ0WDCTSmUs73j9u418RxLvmkYWe719c1rjqo+ghPEI6Q==}
+    dependencies:
+      on-change: 4.0.2
+      semver-compare: 1.0.0
+    dev: false
+
   /@svgr/babel-plugin-add-jsx-attribute/6.5.1_@babel+core@7.21.3:
     resolution: {integrity: sha512-9PYGcXrAxitycIjRmZB+Q0JaN07GZIWaTBIGQzfaZv+qr1n8X1XUEJ5rZ/vx6OVD9RRYlrNnXWExQXcmZeD/BQ==}
     engines: {node: '>=10'}
@@ -1358,6 +1410,12 @@ packages:
 
   /@types/react-reconciler/0.28.2:
     resolution: {integrity: sha512-8tu6lHzEgYPlfDf/J6GOQdIc+gs+S2yAqlby3zTsB3SP2svlqTYe5fwZNtZyfactP74ShooP2vvi1BOp9ZemWw==}
+    dependencies:
+      '@types/react': 17.0.53
+    dev: false
+
+  /@types/react-vertical-timeline-component/3.3.3:
+    resolution: {integrity: sha512-xmKeQ9TtZLeGtsWQx2im0U79wnC0M2F/FPEAHP7uS3G9SAVgis1XSHzq/mq7XrcbnI9eiZbL7dhiy/TqCuDc7w==}
     dependencies:
       '@types/react': 17.0.53
     dev: false
@@ -1789,6 +1847,10 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
+
   /clsx/1.1.1:
     resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
     engines: {node: '>=6'}
@@ -2070,13 +2132,13 @@ packages:
       eslint: 8.36.0
     dev: false
 
-  /eslint-config-turbo/1.8.8_eslint@8.36.0:
-    resolution: {integrity: sha512-+yT22sHOT5iC1sbBXfLIdXfbZuiv9bAyOXsxTxFCWelTeFFnANqmuKB3x274CFvf7WRuZ/vYP/VMjzU9xnFnxA==}
+  /eslint-config-turbo/1.9.1_eslint@8.36.0:
+    resolution: {integrity: sha512-tUqm5TxI5bpbDEgClbw+UygVPAwYB20FIpAiQsZI8imJNDz30E40TZkp6uWpAKmxykU8T0+t3jwkYokvXmXc0Q==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 8.36.0
-      eslint-plugin-turbo: 1.8.8_eslint@8.36.0
+      eslint-plugin-turbo: 1.9.1_eslint@8.36.0
     dev: false
 
   /eslint-import-resolver-node/0.3.7:
@@ -2207,8 +2269,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-turbo/1.8.8_eslint@8.36.0:
-    resolution: {integrity: sha512-zqyTIvveOY4YU5jviDWw9GXHd4RiKmfEgwsjBrV/a965w0PpDwJgEUoSMB/C/dU310Sv9mF3DSdEjxjJLaw6rA==}
+  /eslint-plugin-turbo/1.9.1_eslint@8.36.0:
+    resolution: {integrity: sha512-QPd0EG0xkoDkXJLwPQKULxHjkR27VmvJtILW4C9aIrqauLZ+Yc/V7R+A9yVwAi6nkMHxUlCSUsBxmiQP9TIlPw==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
@@ -2898,6 +2960,11 @@ packages:
       object.assign: 4.1.4
     dev: false
 
+  /klona/2.0.6:
+    resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
+    engines: {node: '>= 8'}
+    dev: false
+
   /ktx-parse/0.4.5:
     resolution: {integrity: sha512-MK3FOody4TXbFf8Yqv7EBbySw7aPvEcPX++Ipt6Sox+/YMFvR5xaTyhfNSk1AEmMy+RYIw81ctN4IMxCB8OAlg==}
     dev: false
@@ -3106,6 +3173,11 @@ packages:
       es-abstract: 1.21.2
     dev: false
 
+  /on-change/4.0.2:
+    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -3272,12 +3344,24 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-intersection-observer/8.34.0_react@17.0.2:
+    resolution: {integrity: sha512-TYKh52Zc0Uptp5/b4N91XydfSGKubEhgZRtcg1rhTKABXijc4Sdr1uTp5lJ8TN27jwUsdXxjHXtHa0kPj704sw==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+    dependencies:
+      react: 17.0.2
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
   /react-merge-refs/1.1.0:
     resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
+    dev: false
+
+  /react-merge-refs/2.0.1:
+    resolution: {integrity: sha512-pywF6oouJWuqL26xV3OruRSIqai31R9SdJX/I3gP2q8jLxUnA1IwXcLW8werUHLZOrp4N7YOeQNZrh/BKrHI4A==}
     dev: false
 
   /react-reconciler/0.27.0_react@17.0.2:
@@ -3391,6 +3475,17 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
+  /react-vertical-timeline-component/3.6.0_react@17.0.2:
+    resolution: {integrity: sha512-l9zulqjIGlRuaQeplGzV4r/tG2RYBpYt84Il8w4IxnJze2cDIGI04MKo3F7f1sHT0Sih1ohEFts8UV23AJS15Q==}
+    requiresBuild: true
+    dependencies:
+      classnames: 2.3.2
+      prop-types: 15.8.1
+      react-intersection-observer: 8.34.0_react@17.0.2
+    transitivePeerDependencies:
+      - react
+    dev: false
+
   /react/17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
     engines: {node: '>=0.10.0'}
@@ -3495,6 +3590,10 @@ packages:
     resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /semver-compare/1.0.0:
+    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
     dev: false
 
   /semver/6.3.0:

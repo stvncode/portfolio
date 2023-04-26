@@ -19,19 +19,21 @@ export const Header: FC = () => {
         <Flex align="center" gap={70}>
           <Flex align="center" gap={15}>
             <PacmanIcon />
-            <Text weight="bold" size={22}>
+            <Text weight="bold" size="xl">
               Steven Travers
             </Text>
           </Flex>
           {!isMobile && (
             <Flex align="center" gap={20} className={classes.menu}>
-              {menuItems.map((item, i) => (
-                <Link to={`#${item.name.toLowerCase()}`} key={i} className={classes.link}>
-                  <Text size={15} className={classes.menuItem}>
-                    {item.name}
-                  </Text>
+              {menuItems.map((item, i) => <div key={i}>
+                {item.name !== 'Source' ? (
+                  <Link to={`${item.name.toLowerCase()}`} className={classes.link}>
+                    <HeaderLink name={item.name} />
+                  </Link>
+                ) : <Link to="https://github.com/stvncode/portfolio" className={classes.link} target="_blank" rel="noopener noreferrer">
+                  <HeaderLink name={item.name} icon={item.icon} />
                 </Link>
-              ))}
+                }</div>)}
             </Flex>
           )}
         </Flex>
@@ -40,6 +42,18 @@ export const Header: FC = () => {
           <BurgerIcon />
         </Flex>
       </Flex>
-    </MantineHeader>
+    </MantineHeader >
   )
+}
+
+const HeaderLink: FC<{ name: string, icon?: JSX.Element }> = ({ icon, name }) => {
+  const { classes } = useLayoutStyles()
+
+  return <Flex align="center" gap={5} className={classes.menuItem}>
+    {icon}
+    <Text size={15}>
+      {name}
+    </Text>
+  </Flex>
+
 }

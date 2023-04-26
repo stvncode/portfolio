@@ -2,13 +2,13 @@ import { createStyles } from '@mantine/core'
 
 export const useLayoutStyles = createStyles({
   container: {
-    maxWidth: '48rem',
+    maxWidth: '40rem',
     marginRight: 'auto',
     marginLeft: 'auto',
   },
   flex: {
     height: '100%',
-    padding: '0 20px',
+    margin: '0 -7rem'
   },
   menu: {
     marginTop: '.3rem',
