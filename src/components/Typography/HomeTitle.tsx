@@ -1,5 +1,5 @@
-import { Text } from '@mantine/core'
 import { FC } from 'react'
+import { CustomText } from './CustomText'
 import { useTypographyStyles } from './Typography.styles'
 
 interface HomeTitleProps {
@@ -10,6 +10,6 @@ export const HomeTitle: FC<HomeTitleProps> = ({ title }) => {
     const { classes } = useTypographyStyles()
 
     return (
-        <Text underline weight="bold" size="xl" className={classes.underlineOffset}>{title}</Text>
+        <CustomText underline weight="bold" size="xl" className={classes.underlineOffset}>{title}</CustomText>
     )
 }

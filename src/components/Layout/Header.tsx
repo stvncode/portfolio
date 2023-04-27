@@ -1,10 +1,11 @@
-import { Flex, Header as MantineHeader, Text } from '@mantine/core'
+import { Flex, Header as MantineHeader } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { FC } from 'react'
 
 import { BurgerIcon, PacmanIcon, ThemeIcon } from 'components/ActionIcon'
 import { menuItems } from 'constants/menu'
 
+import { CustomText } from 'components/Typography'
 import { Link, useNavigate } from 'react-router-dom'
 import { useLayoutStyles } from './Layout.styles'
 
@@ -21,9 +22,9 @@ export const Header: FC = () => {
         <Flex align="center" gap={70}>
           <Flex align="center" gap={8}>
             <PacmanIcon />
-            <Text weight="bold" size="xl" className={classes.title} onClick={() => navigate('/')}>
+            <CustomText weight="bold" size="xl" className={classes.title} onClick={() => navigate('/')}>
               Steven Travers
-            </Text>
+            </CustomText>
           </Flex>
           {!isMobile && (
             <Flex align="center" gap={20} className={classes.menu}>
@@ -53,9 +54,9 @@ const HeaderLink: FC<{ name: string, icon?: JSX.Element }> = ({ icon, name }) =>
 
   return <Flex align="center" gap={5} className={classes.menuItem}>
     {icon}
-    <Text size={15}>
+    <CustomText size={15}>
       {name}
-    </Text>
+    </CustomText>
   </Flex>
 
 }

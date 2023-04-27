@@ -20,6 +20,7 @@ export const companiesWorks: WorksCardType[] = [
     on: true,
     id: WorksId.CONDUKTOR,
     from: WorksType.COMPANIES,
+    date: '2021 -',
   },
   {
     title: 'Libertrip',
@@ -29,6 +30,7 @@ export const companiesWorks: WorksCardType[] = [
     on: true,
     id: WorksId.LIBERTRIP,
     from: WorksType.COMPANIES,
+    date: '2020 - 2021',
   },
   {
     title: 'Feelingo',
@@ -38,6 +40,7 @@ export const companiesWorks: WorksCardType[] = [
     on: false,
     id: WorksId.FEELINGO,
     from: WorksType.COMPANIES,
+    date: '2018',
   },
   {
     title: 'Orange',
@@ -47,6 +50,7 @@ export const companiesWorks: WorksCardType[] = [
     on: true,
     id: WorksId.ORANGE,
     from: WorksType.COMPANIES,
+    date: '2017 - 2018',
   },
 ]
 
@@ -58,7 +62,8 @@ export const personnalWorks: WorksCardType[] = [
     description: 'Fullstack blog app with kafka',
     on: false,
     id: WorksId.CHRONICLES,
-    from: WorksType.PERSONNAL,
+    from: WorksType.PERSONAL,
+    date: '2022',
   },
   {
     title: 'ArcadeLife',
@@ -67,7 +72,8 @@ export const personnalWorks: WorksCardType[] = [
     description: 'Social network for gamers',
     on: false,
     id: WorksId.ARCADELIFE,
-    from: WorksType.PERSONNAL,
+    from: WorksType.PERSONAL,
+    date: '2022 -',
   },
   {
     title: 'Boarder',
@@ -76,7 +82,8 @@ export const personnalWorks: WorksCardType[] = [
     description: '"Dating" mobile app for board games',
     on: false,
     id: WorksId.BOARDER,
-    from: WorksType.PERSONNAL,
+    from: WorksType.PERSONAL,
+    date: '2022 -',
   },
 ]
 
@@ -90,6 +97,7 @@ export const contentWorks: WorksCardType[] = [
     on: false,
     id: WorksId.CHRONICLES_ARTICLE,
     from: WorksType.CONTENT,
+    date: '2022',
   },
   {
     title: 'Chronicles video',
@@ -99,6 +107,7 @@ export const contentWorks: WorksCardType[] = [
     on: true,
     id: WorksId.CHRONICLES_VIDEO,
     from: WorksType.CONTENT,
+    date: '2022',
   },
 ]
 

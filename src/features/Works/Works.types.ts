@@ -6,11 +6,12 @@ export interface WorksCardType {
   on: boolean
   description: string
   from: WorksType
+  date: string
 }
 
 export enum WorksType {
   COMPANIES = 'companies',
-  PERSONNAL = 'personnal',
+  PERSONAL = 'personal',
   CONTENT = 'content',
 }
 

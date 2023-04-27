@@ -19,8 +19,8 @@ export const ThemeIcon: FC = () => {
         transition={{ duration: 0.2 }}
       >
         <ActionIcon
-          variant="outline"
-          color={dark ? 'yellow' : 'violet'}
+          variant="filled"
+          color={dark ? 'yellow.7' : 'violet.9'}
           onClick={() => toggleColorScheme()}
           title="Toggle color scheme"
         >

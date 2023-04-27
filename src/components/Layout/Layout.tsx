@@ -20,7 +20,7 @@ export const Layout: FC = () => {
       <Flex className={classes.outlet}>
         <Outlet />
       </Flex>
-      <Text mt={50} mb={30} color="gray" align='center' className={classes.footer}>2023 Steven Travers. All Rights Reserved.</Text>
+      <Text mt={50} mb={30} color="gray.6" align='center' className={classes.footer}>2023 Steven Travers. All Rights Reserved.</Text>
     </Flex>
   )
 }

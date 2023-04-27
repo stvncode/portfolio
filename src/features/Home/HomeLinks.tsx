@@ -11,7 +11,7 @@ export const HomeLinks: FC = () => {
     return (
         <Flex direction="column" gap={20}>
             <HomeTitle title="On the web" />
-            <Flex direction="column" gap={5}>
+            <Flex ml={15} direction="column" gap={5}>
                 <Links to="https://github.com/stvncode" name="@stvncode" icon={<IconBrandGithub size={20} className={classes.icon} />} />
                 <Links to="https://www.linkedin.com/in/steven-travers-313b1b102/" name="Steven Travers" icon={<IconBrandLinkedin size={20} className={classes.icon} />} />
             </Flex>
@@ -25,7 +25,7 @@ const Links: FC<{ to: string, name: string, icon: JSX.Element }> = ({ to, name, 
     return <Flex align="center" gap={20}>
         {icon}
         <Link to={to} target="_blank" rel="noopener noreferrer" className={classes.link}>
-            <Text color="violet">{name}</Text>
+            <Text color="violet.9">{name}</Text>
         </Link>
     </Flex>
 }

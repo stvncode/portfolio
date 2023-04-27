@@ -3,8 +3,8 @@ import { WorksCardType } from '../Works.types'
 import { WorksDescriptionLayout } from './WorksDescriptionLayout'
 
 export const Orange: FC<WorksCardType> = (work) => {
-    const { title, img } = work
+    const { title, img, from, date, link } = work
     return (
-        <WorksDescriptionLayout title={title} img={img} />
+        <WorksDescriptionLayout title={title} img={img} from={from} date={date} link={link} />
     )
 }

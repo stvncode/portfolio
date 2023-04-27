@@ -1,6 +1,7 @@
-import { Flex, Grid, Text } from '@mantine/core'
+import { Flex, Grid } from '@mantine/core'
 import { useViewportSize } from '@mantine/hooks'
 import { Section } from 'components/Section'
+import { CustomText } from 'components/Typography'
 import { FC } from 'react'
 import { WorksCardType } from './Works.types'
 import { WorksCard } from './WorksCard'
@@ -15,7 +16,7 @@ export const WorksCards: FC<WorksCardsProps> = ({ title, work }) => {
 
     return (
         <Flex direction="column" gap={10}>
-            <Text size="lg" weight="bold">{title}</Text>
+            <CustomText size="lg" weight="bold">{title}</CustomText>
             <Section>
                 <Grid gutter="xl">
                     {work.map((cw, i) =>
