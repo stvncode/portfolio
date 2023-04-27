@@ -1,3 +1,4 @@
+import babel from '@rollup/plugin-babel'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
@@ -15,5 +16,16 @@ export default defineConfig({
     host: true,
     port: 5170,
   },
-  plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],
+  plugins: [
+    checker({ typescript: true }),
+    react(),
+    svgr(),
+    tsconfigPaths(),
+    babel({
+      babelrc: true,
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      exclude: 'node_modules/**',
+    }),
+  ],
+  resolve: {},
 })
