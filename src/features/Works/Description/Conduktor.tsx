@@ -18,14 +18,15 @@ export const Conduktor: FC<WorksCardType> = (work) => {
                 an open-source streaming platform used for building real-time data pipelines and streaming applications.
             </CustomText>
             <CustomText indent>
-                Conduktor provides a user-friendly desktop application that allows developers and data engineers to easily
+                The platform provides a user-friendly desktop application that allows developers and data engineers to easily
                 monitor, manage, and interact with Kafka clusters. Some of the features of the Conduktor application include
                 real-time cluster monitoring, testing, rbac and so on.
             </CustomText>
             <CustomText indent>
-                The application is designed to simplify the complexity of working with Kafka and make it easier for developers
-                to build and deploy Kafka-based applications. Conduktor's mission is to help developers and data engineers
-                unleash the full potential of Kafka by providing them with powerful tools that are easy to use and understand.
+                I had the privilege of being the first frontend developer at Conduktor, where I contributed to the development of the company's frontend
+                infrastructure (design system, monorepo [...]).
+                I worked diligently to build intuitive user interfaces and improve the user experience across all applications in our product suite.
+                While I played a role in the company's success, I am grateful for the opportunity to have worked alongside a talented team of individuals.
             </CustomText>
             <Flex mt={25} direction="column" gap={10}>
                 <WorksDescriptionInfos infos={conduktorInfos(link)} />
