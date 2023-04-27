@@ -9,7 +9,7 @@ import {
   orange,
   videoChronicles,
 } from 'assets'
-import { WorksCardType } from './Works.types'
+import { WorksCardType, WorksId, WorksType } from './Works.types'
 
 export const companiesWorks: WorksCardType[] = [
   {
@@ -18,6 +18,8 @@ export const companiesWorks: WorksCardType[] = [
     link: 'https://www.conduktor.io/',
     description: 'Apache Kafka platform',
     on: true,
+    id: WorksId.CONDUKTOR,
+    from: WorksType.COMPANIES,
   },
   {
     title: 'Libertrip',
@@ -25,6 +27,8 @@ export const companiesWorks: WorksCardType[] = [
     link: 'https://www.libertrip.com/',
     description: 'All in one travel platform',
     on: true,
+    id: WorksId.LIBERTRIP,
+    from: WorksType.COMPANIES,
   },
   {
     title: 'Feelingo',
@@ -32,6 +36,8 @@ export const companiesWorks: WorksCardType[] = [
     link: 'https://feelingo.com/',
     description: 'Ecological hotel reservation',
     on: false,
+    id: WorksId.FEELINGO,
+    from: WorksType.COMPANIES,
   },
   {
     title: 'Orange',
@@ -39,6 +45,8 @@ export const companiesWorks: WorksCardType[] = [
     link: 'https://www.orange.com/en',
     description: 'Web application for PM',
     on: true,
+    id: WorksId.ORANGE,
+    from: WorksType.COMPANIES,
   },
 ]
 
@@ -49,6 +57,8 @@ export const personnalWorks: WorksCardType[] = [
     link: 'https://github.com/stvncode/chronicles',
     description: 'Fullstack blog app with kafka',
     on: false,
+    id: WorksId.CHRONICLES,
+    from: WorksType.PERSONNAL,
   },
   {
     title: 'ArcadeLife',
@@ -56,6 +66,8 @@ export const personnalWorks: WorksCardType[] = [
     link: 'https://github.com/stvncode/ArcadeLife',
     description: 'Social network for gamers',
     on: false,
+    id: WorksId.ARCADELIFE,
+    from: WorksType.PERSONNAL,
   },
   {
     title: 'Boarder',
@@ -63,6 +75,8 @@ export const personnalWorks: WorksCardType[] = [
     link: 'https://github.com/stvncode/Boarder',
     description: '"Dating" mobile app for board games',
     on: false,
+    id: WorksId.BOARDER,
+    from: WorksType.PERSONNAL,
   },
 ]
 
@@ -74,6 +88,8 @@ export const contentWorks: WorksCardType[] = [
       'https://dev.to/stvncode/fullstack-blog-app-with-t3-stack-next-jsauth-prisma-trpc[…]a225f4061f1a6f395d2ff92ca80671ab9619244adc2c85f615096255d15360d57',
     description: 'Article about my project chronicles',
     on: false,
+    id: WorksId.CHRONICLES_ARTICLE,
+    from: WorksType.CONTENT,
   },
   {
     title: 'Chronicles video',
@@ -81,5 +97,9 @@ export const contentWorks: WorksCardType[] = [
     link: 'https://www.youtube.com/watch?v=4BbnsqMkK30&t',
     description: 'Video about my project chronicles',
     on: true,
+    id: WorksId.CHRONICLES_VIDEO,
+    from: WorksType.CONTENT,
   },
 ]
+
+export const allWorks = [...companiesWorks, ...personnalWorks, ...contentWorks]

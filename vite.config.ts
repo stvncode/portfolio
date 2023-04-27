@@ -13,6 +13,7 @@ export default defineConfig({
   },
   server: {
     host: true,
+    port: 5170,
   },
   plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],
 })

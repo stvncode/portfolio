@@ -1,12 +1,12 @@
 import { ColorScheme, ColorSchemeProvider, DEFAULT_THEME, MantineProvider } from '@mantine/core'
 import { FC } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 import { useLocalStorage } from '@mantine/hooks'
 import { Layout } from 'components/Layout'
 import { Contact } from 'pages/Contact'
 import { Home } from 'pages/Home'
-import { Work } from 'pages/Work'
+import { Work, WorkDescription } from 'pages/Work'
 
 export const App: FC = () => {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({ key: 'color-scheme', defaultValue: 'dark' })
@@ -32,9 +32,13 @@ export const App: FC = () => {
           <Routes>
             <Route element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="works" element={<Work />} />
+              <Route path="works">
+                <Route index element={<Work />} />
+                <Route path=":id" element={<WorkDescription />} />
+              </Route>
               <Route path="contact" element={<Contact />} />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>
       </MantineProvider>

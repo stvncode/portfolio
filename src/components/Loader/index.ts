@@ -1,1 +1,1 @@
-export { CanvasLoader } from './Loader'
+export { CustomLoader } from './CustomLoader'

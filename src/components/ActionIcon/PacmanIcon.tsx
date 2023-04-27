@@ -15,9 +15,8 @@ export const PacmanIcon: FC = () => {
       variant="transparent"
       onClick={() => navigate('/')}
       className={classes.pacman}
-      title="Icon"
     >
-      <IconPacman size="3rem" />
+      <IconPacman size="3rem" className={classes.icon} />
     </ActionIcon>
   )
 }

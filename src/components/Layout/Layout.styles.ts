@@ -5,6 +5,7 @@ export const useLayoutStyles = createStyles({
     maxWidth: '40rem',
     marginRight: 'auto',
     marginLeft: 'auto',
+    minHeight: '100vh',
   },
   flex: {
     height: '100%',
@@ -23,5 +24,14 @@ export const useLayoutStyles = createStyles({
   link: { textDecoration: 'none', color: 'inherit' },
   title: {
     cursor: 'pointer',
+  },
+  footer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  outlet: {
+    flex: 1,
   },
 })

@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import { useWorksStyles } from './Works.styles'
 import { WorksCardType } from './Works.types'
 
-export const WorksCard: FC<WorksCardType> = ({ img, title, description, on, link }) => {
+export const WorksCard: FC<WorksCardType> = ({ img, title, description, on, id }) => {
     const navigate = useNavigate()
 
     const { classes } = useWorksStyles()
 
     return (
-        <Card shadow="sm" padding="lg" radius="md" className={classes.card} withBorder onClick={() => navigate(link)}>
+        <Card shadow="sm" padding="lg" radius="md" className={classes.card} withBorder onClick={() => navigate(id)}>
             <Card.Section>
                 <Image
                     src={img}

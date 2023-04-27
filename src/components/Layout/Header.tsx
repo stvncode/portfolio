@@ -19,7 +19,7 @@ export const Header: FC = () => {
     <MantineHeader height={60} withBorder={false}>
       <Flex align="center" justify="space-between" className={classes.flex}>
         <Flex align="center" gap={70}>
-          <Flex align="center" gap={15}>
+          <Flex align="center" gap={8}>
             <PacmanIcon />
             <Text weight="bold" size="xl" className={classes.title} onClick={() => navigate('/')}>
               Steven Travers
