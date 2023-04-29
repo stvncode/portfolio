@@ -24,7 +24,7 @@ export const Conduktor: FC<WorksCardType> = (work) => {
             </CustomText>
             <CustomText indent>
                 I had the privilege of being the first frontend developer at Conduktor, where I contributed to the development of the company's frontend
-                infrastructure (design system, monorepo [...]).
+                infrastructure (design system, monorepo, etc).
                 I worked diligently to build intuitive user interfaces and improve the user experience across all applications in our product suite.
                 While I played a role in the company's success, I am grateful for the opportunity to have worked alongside a talented team of individuals.
             </CustomText>

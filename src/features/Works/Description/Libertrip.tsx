@@ -15,13 +15,17 @@ export const Libertrip: FC<WorksCardType> = (work) => {
                 Libertrip is a French company that offers a digital platform for planning and booking personalized travel experiences.
             </CustomText>
             <CustomText indent>
-                Through its platform, Libertrip allows users to create their own travel itineraries, which are tailored to their preferences and interests. The platform offers a range of features, including destination inspiration, travel planning tools, and booking options for accommodation, transportation, and activities.
+                Through its platform, Libertrip allows users to create their own travel itineraries, which are tailored to their preferences and
+                interests. The platform offers a range of features, including destination inspiration, travel planning tools, and booking options
+                for accommodation, transportation, and activities.
             </CustomText>
             <CustomText indent>
-                One of the unique features of Libertrip is its focus on sustainable and responsible tourism. The platform encourages travelers to make eco-friendly choices when planning their trips, and offers information and resources to help users make informed decisions.
+                Libertrip's mission is to provide travelers with a more personalized and sustainable approach to travel, while also supporting
+                local communities and promoting responsible tourism practices.
             </CustomText>
             <CustomText indent>
-                Libertrip's mission is to provide travelers with a more personalized and sustainable approach to travel, while also supporting local communities and promoting responsible tourism practices.
+                When I arrived in the company, the project was working well and my role was to add features such as all inclusive trips, refacto of
+                vue js code to react and adding kafka to it. Unfortunately, with the covid, the company had to close due to lack of revenues.
             </CustomText>
             <Flex mt={25} direction="column" gap={10}>
                 <WorksDescriptionInfos infos={libertripInfos(link)} />

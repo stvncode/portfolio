@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useLayoutStyles } from './Layout.styles'
 
 export const Header: FC = () => {
-  const { classes } = useLayoutStyles()
+  const { classes } = useLayoutStyles(false)
 
   const navigate = useNavigate()
 
@@ -50,7 +50,7 @@ export const Header: FC = () => {
 }
 
 const HeaderLink: FC<{ name: string, icon?: JSX.Element }> = ({ icon, name }) => {
-  const { classes } = useLayoutStyles()
+  const { classes } = useLayoutStyles(false)
 
   return <Flex align="center" gap={5} className={classes.menuItem}>
     {icon}

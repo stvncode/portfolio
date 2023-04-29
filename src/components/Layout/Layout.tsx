@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
 import { Flex, Text } from '@mantine/core'
 import { Header } from './Header'
@@ -12,7 +12,9 @@ const variants = {
 }
 
 export const Layout: FC = () => {
-  const { classes } = useLayoutStyles()
+  const { pathname } = useLocation()
+
+  const { classes } = useLayoutStyles(pathname.slice(1) === 'contact')
 
   return (
     <Flex direction="column" className={classes.container}>

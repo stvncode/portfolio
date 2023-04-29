@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core'
 
-export const useLayoutStyles = createStyles({
+export const useLayoutStyles = createStyles((_, isContact: boolean) => ({
   container: {
     maxWidth: '40rem',
     marginRight: 'auto',
@@ -33,5 +33,6 @@ export const useLayoutStyles = createStyles({
   },
   outlet: {
     flex: 1,
+    justifyContent: isContact ? 'center' : undefined,
   },
-})
+}))
