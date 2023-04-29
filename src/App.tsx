@@ -1,4 +1,5 @@
 import { ColorScheme, ColorSchemeProvider, DEFAULT_THEME, MantineProvider } from '@mantine/core'
+import { Notifications } from '@mantine/notifications'
 import { FC } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 
@@ -28,6 +29,7 @@ export const App: FC = () => {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
+        <Notifications />
         <BrowserRouter>
           <Routes>
             <Route element={<Layout />}>

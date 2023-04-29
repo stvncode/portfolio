@@ -1,12 +1,12 @@
+import emailjs from '@emailjs/browser'
 import { Box, Button, Flex, Group, TextInput, Textarea } from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form'
-import sgMail from "@sendgrid/mail"
+import { notifications } from '@mantine/notifications'
 import { Section } from 'components/Section'
-import { FC } from 'react'
+import env from 'core/env'
+import { FC, useState } from 'react'
 import { ContactFormValues, contactSchema } from './Contact.schema'
 import { useContactStyles } from './Contact.styles'
-
-sgMail.setApiKey("YOUR_SENDGRID_API_KEY")
 
 export const Contact: FC = () => {
   const form = useForm({
@@ -18,20 +18,32 @@ export const Contact: FC = () => {
     validate: zodResolver(contactSchema)
   })
 
-  const onSubmit = (values: ContactFormValues) => {
+  const [loading, setLoading] = useState(false)
+
+  const onSubmit = async (values: ContactFormValues) => {
 
     const msg = {
-      to: "stvncodechannel@gmail.com",
-      from: values.email,
-      subject: `${values.name} contact portfolio`,
-      text: values.message,
-      html: values.message,
+      email: values.email,
+      from_name: values.name,
+      message: values.message,
     }
 
-    sgMail
-      .send(msg)
-      .then(() => console.log("Email sent successfully"))
-      .catch((error) => console.error(error))
+    try {
+      setLoading(true)
+      await emailjs.send(env.VITE_EMAIL_SERVICE_ID, env.VITE_EMAIL_TEMPLATE_ID, msg, env.VITE_EMAIL_PUBLIC_KEY)
+      notifications.show({
+        variant: 'success',
+        title: 'Success!',
+        message: 'Your message has been sent.',
+      })
+      setLoading(false)
+    } catch {
+      notifications.show({
+        variant: 'error',
+        title: 'Error!',
+        message: 'Something went wrong.',
+      })
+    }
   }
 
   const { classes } = useContactStyles()
@@ -64,7 +76,7 @@ export const Contact: FC = () => {
               required
             />
             <Group position="center" mt="xl">
-              <Button type="submit" color="violet" variant="filled">
+              <Button loading={loading} type="submit" color="violet" variant="filled">
                 Submit
               </Button>
             </Group>
