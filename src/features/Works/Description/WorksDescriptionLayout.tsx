@@ -22,7 +22,6 @@ export const WorksDescriptionLayout: FC<WorksDescriptionLayoutProps> = ({ img, t
     return (
         <Flex mt="xl" direction="column" gap={10} className={classes.container}>
             <Flex direction="column" gap={30} className={classes.container}>
-                <Image src={img} height="21rem" radius="lg" className={classes.image} onClick={() => window.open(link, '_blank')} />
                 <Flex gap={5} align="center">
                     <Text mb={3} size="lg" weight="bolder" color="violet.7" className={classes.back} onClick={() => navigate(`/works#${from}`)}>Works</Text>
                     <IconChevronRight />
@@ -31,6 +30,7 @@ export const WorksDescriptionLayout: FC<WorksDescriptionLayoutProps> = ({ img, t
                 </Flex>
             </Flex>
             {children}
+            <Image mt={25} src={img} height="21rem" radius="lg" className={classes.image} onClick={() => window.open(link, '_blank')} />
         </Flex>
     )
 }

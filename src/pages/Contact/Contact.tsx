@@ -3,6 +3,7 @@ import { Box, Button, Flex, Group, TextInput, Textarea } from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form'
 import { notifications } from '@mantine/notifications'
 import { Section } from 'components/Section'
+import { CustomText } from 'components/Typography'
 import env from 'core/env'
 import { FC, useState } from 'react'
 import { ContactFormValues, contactSchema } from './Contact.schema'
@@ -50,7 +51,10 @@ export const Contact: FC = () => {
 
   return (
     <Section>
-      <Flex direction="column" align="center">
+      <Flex direction="column" gap={10} align="center">
+        <CustomText>
+          <h2>Let's have a talk!</h2>
+        </CustomText>
         <Box maw={520} mx="auto">
           <form onSubmit={form.onSubmit(onSubmit)} className={classes.form}>
             <TextInput

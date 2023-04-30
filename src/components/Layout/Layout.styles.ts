@@ -33,6 +33,12 @@ export const useLayoutStyles = createStyles((_, isContact: boolean) => ({
   },
   outlet: {
     flex: 1,
-    justifyContent: isContact ? 'center' : undefined,
+    justifyContent: isContact ? 'start' : undefined,
+  },
+  loader: {
+    height: '230px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 }))
