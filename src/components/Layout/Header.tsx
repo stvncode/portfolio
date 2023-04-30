@@ -10,11 +10,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useLayoutStyles } from './Layout.styles'
 
 export const Header: FC = () => {
-  const { classes } = useLayoutStyles(false)
+  const isMobile = useMediaQuery('(max-width: 767px)')
+
+  const { classes } = useLayoutStyles({ isContact: false, isMobile })
 
   const navigate = useNavigate()
 
-  const isMobile = useMediaQuery('(max-width: 767px)')
 
   return (
     <MantineHeader height={60} withBorder={false}>
@@ -50,7 +51,9 @@ export const Header: FC = () => {
 }
 
 const HeaderLink: FC<{ name: string, icon?: JSX.Element }> = ({ icon, name }) => {
-  const { classes } = useLayoutStyles(false)
+  const isMobile = useMediaQuery('(max-width: 767px)')
+
+  const { classes } = useLayoutStyles({ isContact: false, isMobile })
 
   return <Flex align="center" gap={5} className={classes.menuItem}>
     {icon}
