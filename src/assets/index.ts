@@ -15,6 +15,7 @@ import threejs from './tech/threejs.svg'
 import contact from './contact.png'
 import profile from './profile.jpeg'
 
+import matoulina from './work/matoulina.png'
 import conduktor from './work/conduktor.webp'
 import libertrip from './work/libertrip.png'
 import orange from './work/orange.png'
@@ -23,9 +24,11 @@ import articlesChronicles from './work/articlesChronicles.png'
 import chronicles from './work/chronicles.png'
 import arcadeLife from './work/arcadeLife.png'
 import boarder from './work/boarder.png'
+import authStarter from './work/auth-starter.png'
 import videoChronicles from './work/videoChronicles.png'
 
 export {
+  matoulina,
   contact,
   profile,
   css,
@@ -50,4 +53,5 @@ export {
   videoChronicles,
   arcadeLife,
   boarder,
+  authStarter,
 }

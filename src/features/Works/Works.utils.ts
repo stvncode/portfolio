@@ -1,11 +1,13 @@
 import {
   arcadeLife,
   articlesChronicles,
+  authStarter,
   boarder,
   chronicles,
   conduktor,
   feelingo,
   libertrip,
+  matoulina,
   orange,
   videoChronicles,
 } from 'assets'
@@ -21,6 +23,16 @@ export const companiesWorks: WorksCardType[] = [
     id: WorksId.CONDUKTOR,
     from: WorksType.COMPANIES,
     date: '2021 -',
+  },
+  {
+    title: 'Mathilde',
+    img: matoulina,
+    link: 'https://mathildebauden.vercel.app/',
+    description: 'Psychologist website',
+    on: true,
+    id: WorksId.MATOULINA,
+    from: WorksType.COMPANIES,
+    date: '2023',
   },
   {
     title: 'Libertrip',
@@ -55,6 +67,16 @@ export const companiesWorks: WorksCardType[] = [
 ]
 
 export const personnalWorks: WorksCardType[] = [
+  {
+    title: 'Auth starter',
+    img: authStarter,
+    link: 'https://github.com/stvncode/wpgg',
+    description: 'Fullstack auth starter',
+    on: true,
+    id: WorksId.AUTH_STARTER,
+    from: WorksType.PERSONAL,
+    date: '2023',
+  },
   {
     title: 'Chronicles',
     img: chronicles,

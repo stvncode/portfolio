@@ -1,6 +1,6 @@
 import { CustomLoader } from 'components/Loader'
 import { Section } from 'components/Section'
-import { ArcadeLife, Boarder, Chronicles, ChroniclesArticle, ChroniclesVideo, Conduktor, Feelingo, Libertrip, Orange } from 'features/Works'
+import { ArcadeLife, AuthStarter, Boarder, Chronicles, ChroniclesArticle, ChroniclesVideo, Conduktor, Feelingo, Libertrip, Matoulina, Orange } from 'features/Works'
 import { WorksId } from 'features/Works/Works.types'
 import { allWorks } from 'features/Works/Works.utils'
 import { FC } from 'react'
@@ -23,6 +23,8 @@ export const WorkDescription: FC = () => {
             .with(WorksId.CHRONICLES_VIDEO, () => <ChroniclesVideo {...work} />)
             .with(WorksId.BOARDER, () => <Boarder {...work} />)
             .with(WorksId.ARCADELIFE, () => <ArcadeLife {...work} />)
+            .with(WorksId.AUTH_STARTER, () => <AuthStarter {...work} />)
+            .with(WorksId.MATOULINA, () => <Matoulina {...work} />)
             .with(undefined, () => <CustomLoader fullScreen />)
             .otherwise(() => <Navigate to="/" />)}</Section>
 }

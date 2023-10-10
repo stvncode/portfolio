@@ -8,6 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   server: {
     host: true,
+    open: true,
     port: 5170,
   },
   plugins: [checker({ typescript: true }), react(), svgr(), tsconfigPaths()],

@@ -12,9 +12,10 @@ interface WorksDescriptionLayoutProps {
     from: WorksType
     date: string
     link: string
+    video?: string
 }
 
-export const WorksDescriptionLayout: FC<WorksDescriptionLayoutProps> = ({ img, title, from, date, link, children }) => {
+export const WorksDescriptionLayout: FC<WorksDescriptionLayoutProps> = ({ img, title, from, date, link, children, video }) => {
     const navigate = useNavigate()
 
     const { classes } = useWorksDescriptionStyles()
@@ -30,7 +31,22 @@ export const WorksDescriptionLayout: FC<WorksDescriptionLayoutProps> = ({ img, t
                 </Flex>
             </Flex>
             {children}
-            <Image mt={25} src={img} height="21rem" radius="lg" className={classes.image} onClick={() => window.open(link, '_blank')} />
+            {video ?
+                <Flex mt={25}>
+                    <video height="336" controls style={{ width: '100%' }}>
+                        <source src={video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </Flex> :
+                <Image
+                    mt={25}
+                    src={img}
+                    height="21rem"
+                    radius="lg"
+                    className={classes.image}
+                    onClick={() => window.open(link, '_blank')}
+                />
+            }
         </Flex>
     )
 }

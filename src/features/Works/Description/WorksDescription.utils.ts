@@ -16,6 +16,18 @@ export const arcardeLifeInfos = (link: string): WorksDescriptionInfoProps[] => [
   },
 ]
 
+export const authStarterInfos = (link: string): WorksDescriptionInfoProps[] => [
+  {
+    title: 'Website',
+    description: link,
+    isLink: true,
+  },
+  {
+    title: 'Stack',
+    description: 'React, Typescript, tRPC, prisma, radix-theme...',
+  },
+]
+
 export const boarderInfos = (link: string): WorksDescriptionInfoProps[] => [
   {
     title: 'Website',
@@ -136,5 +148,21 @@ export const orangeInfos = (link: string): WorksDescriptionInfoProps[] => [
   {
     title: 'Stack',
     description: 'Angular, node JS',
+  },
+]
+
+export const matoulinaInfos = (link: string): WorksDescriptionInfoProps[] => [
+  {
+    title: 'Website',
+    description: link,
+    isLink: true,
+  },
+  {
+    title: 'Platform',
+    description: 'Windows/macOS/Linux and mobile friendly',
+  },
+  {
+    title: 'Stack',
+    description: 'React, Mantine, Typescript, nextjs, framer-motion',
   },
 ]

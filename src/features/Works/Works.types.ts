@@ -16,6 +16,7 @@ export enum WorksType {
 }
 
 export enum WorksId {
+  MATOULINA = 'matoulina',
   CONDUKTOR = 'conduktor',
   ORANGE = 'orange',
   LIBERTRIP = 'libertrip',
@@ -25,4 +26,5 @@ export enum WorksId {
   BOARDER = 'boarder',
   CHRONICLES_ARTICLE = 'chronicles-article',
   CHRONICLES_VIDEO = 'chronicles-video',
+  AUTH_STARTER = 'auth-starter',
 }
